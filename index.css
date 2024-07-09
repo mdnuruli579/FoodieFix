@@ -1,0 +1,85 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid grey;
+}
+.logo{
+    width: 150px;
+}
+.nav-item >ul{
+    display: flex;
+    list-style-type: none;
+    font-size: 24px;
+}
+.nav-item >ul > li{
+    padding: 10px;
+    margin: 10px;
+}
+.rest-card {
+    width: 200px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    flex-direction: column;
+}
+.rest-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+.rest-card h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.rest-card h4 {
+    margin: 5px 0; 
+    font-size: 1em;
+    color: #888;
+    overflow-wrap: break-word; 
+    word-wrap: break-word; 
+}
+.rest-card p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.rest-card span {
+    font-weight: bold;
+}
+.rest-card:hover{
+    border-color: grey;
+    border-radius: 2px;
+    border: 1px;
+    transform: translateY(-5px);
+}
+.search{
+    padding: 10px;
+}
+.restContainer{
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.footer{
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    margin-top: auto;
+    text-align: center;
+    height: 100px;
+    padding: 10px;
+    margin: 10px;
+}
