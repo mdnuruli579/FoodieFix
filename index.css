@@ -15,6 +15,9 @@
     padding: 10px;
     margin: 10px;
 }
+.nav-item >ul > li >a{
+    cursor: pointer;
+}
 .rest-card {
     width: 200px;
     border: 1px solid #ddd;
@@ -81,5 +84,12 @@
     text-align: center;
     height: 100px;
     padding: 10px;
+    margin: 10px;
+}
+.cart{
+    height: 40px;
+    border-radius: 3px;
+}
+.filter-btn{
     margin: 10px;
 }
