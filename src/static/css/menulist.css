@@ -1,0 +1,65 @@
+.menu {
+    width: 80%;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.menu h2 {
+    margin-top: 0;
+}
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+.menu-item:last-child {
+    border-bottom: none;
+}
+.menu-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+}
+.menu-item .details {
+    flex: 1;
+    margin-left: 20px;
+}
+.menu-item .details h3 {
+    margin: 0 0 10px 0;
+}
+.menu-item .details .price {
+    color: #333;
+    font-size: 1.2em;
+}
+.menu-item .details .rating {
+    color: #28a745;
+    margin-top: 5px;
+}
+.menu-item .details .description {
+    color: #666;
+    margin-top: 5px;
+}
+.menu-item .add-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.menu-item .add-btn button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.menu-item .add-btn button:hover {
+    background-color: #218838;
+}
+.menu-item .add-btn .customisable {
+    margin-top: 5px;
+    color: #666;
+    font-size: 0.9em;
+}

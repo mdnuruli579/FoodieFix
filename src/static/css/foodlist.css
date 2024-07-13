@@ -1,0 +1,41 @@
+.food-item{
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 70%;
+    padding: 20px;
+    margin: 10px;
+}
+.card h2 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+}
+.rating, .cost, .cuisine {
+    display: inline-block;
+    margin-right: 10px;
+}
+.cuisine {
+    color: #e74c3c;
+}
+.details {
+    margin: 10px 0;
+    color: #666;
+}
+.delivery {
+    display: flex;
+    align-items: center;
+    color: #666;
+}
+.delivery img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
