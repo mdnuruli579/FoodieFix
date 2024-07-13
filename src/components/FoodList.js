@@ -3,6 +3,7 @@ import { findLocation } from '../utils/common'
 import { useParams } from 'react-router-dom'
 import { API_URL, DEL_LOGO } from '../utils/constant';
 import Loader from './Loader';
+import MenuList from './MenuList';
 
 
 const FoodList = () => {

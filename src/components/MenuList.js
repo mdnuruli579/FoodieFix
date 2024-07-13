@@ -1,40 +1,48 @@
+import { useState } from "react";
+
 const MenuList=(props)=>{
-    console.log(props);
+    const menuList=props?.menu?.groupedCard?.cardGroupMap?.REGULAR?.cards;
+    // console.log(menuList);
+    const itemCards=menuList.filter((item,index)=> index!==0 && item?.card?.card?.title!=="Top Picks" );
+    // const itemCards=menuList[1]?.card?.card;
+    // console.log(itemCards);
     return (
         <div className="menu">
-        <h2>Recommended (20)</h2>
-        
-        <div className="menu-item">
-            <div className="details">
-                <span className="bestseller">⭐ Bestseller</span>
-                <h3>Create Your Flavour Fun Combo - Box Of 2 - Veg Pizza</h3>
-                <span className="price">₹198</span>
-                <div className="rating">⭐ 4.1 (843)</div>
-                <p className="description">Serves 2 | Choose any 2 veg personal pizzas from our flavour fun range. For meals, refer to the nutritional data for individual products.</p>
-            </div>
-            <div className="add-btn">
-                <img src="https://via.placeholder.com/80" alt="Pizza"/>
-                <button>ADD</button>
-                <span className="customisable">Customisable</span>
-            </div>
+            {
+                itemCards.map((element, index) => {
+                    const cardItem = element?.card?.card?.itemCards;
+                    if (cardItem && cardItem.length > 0) {
+                        return (
+                            <div key={index} className="category-section">
+                                <input type="checkbox" id={`category-toggle-${index}`} className="category-toggle" />
+                                <label className="category" htmlFor={`category-toggle-${index}`}>{cardItem[0]?.card?.info?.category}</label>
+                                <div className="dropdown-content">
+                                    {cardItem.map((item) => (
+                                        <div key={item?.card?.info?.id} className="menu-item">
+                                            <div className="details">
+                                                <h3>{item?.card?.info?.name}</h3>
+                                                <span className="price">₹{item?.card?.info?.price / 100 || 0}</span>
+                                                <div className="rating">⭐ {item?.card?.info?.ratings?.aggregatedRating?.rating} ({item?.card?.info?.ratings?.aggregatedRating?.ratingCountV2})</div>
+                                                <p className="description">{item?.card?.info.description}</p>
+                                            </div>
+                                            <div className="add-btn">
+                                                <img src="https://via.placeholder.com/80" alt="Pizza" />
+                                                <button>ADD</button>
+                                                <span className="customisable">Customisable</span>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        );
+                    } else {
+                        return null;
+                    }
+                })
+            }
         </div>
-
-        <div className="menu-item">
-            <div className="details">
-                <span className="bestseller">⭐ Bestseller</span>
-                <h3>Margherita Pizza</h3>
-                <span className="price">₹169</span>
-                <div className="rating">⭐ 4.1 (284)</div>
-                <p className="description">Serves 1 | Pizza topped with our herb-infused signature pan sauce and 100% mozzarella cheese. A classic treat for all cheese lovers out there!</p>
-            </div>
-            <div className="add-btn">
-                <img src="https://via.placeholder.com/80" alt="Pizza"/>
-                <button>ADD</button>
-                <span className="customisable">Customisable</span>
-            </div>
-        </div>
-        
-    </div>
-
-    )
+    );
+    
+    
 }
+export default MenuList;

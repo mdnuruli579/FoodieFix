@@ -1,10 +1,84 @@
 .menu {
-    width: 80%;
-    max-width: 800px;
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    margin: 10px;
+}
+.menu {
+    font-family: Arial, sans-serif;
+}
+
+.category-section {
+    margin-bottom: 20px;
+}
+
+.category {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.category-toggle {
+    display: none;
+}
+
+.category-toggle:checked + .category + .dropdown-content {
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.details {
+    max-width: 60%;
+}
+
+.price, .rating, .description {
+    margin: 5px 0;
+}
+
+.add-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add-btn img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: 5px;
+}
+
+.add-btn button {
+    margin-bottom: 5px;
+}
+
+.customisable {
+    font-size: 12px;
+    color: #888;
+}
+
+.category-section {
+    margin-bottom: 20px;
+}
+
+.category {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    cursor: pointer;
+    user-select: none;
 }
 .menu h2 {
     margin-top: 0;
