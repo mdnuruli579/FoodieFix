@@ -12,6 +12,7 @@ const FoodList = () => {
     useEffect(()=>{
         getFoodItem();
     },[]);
+    
     const getFoodItem=async ()=>{
         const location= await findLocation();
         const data=await fetch(`${API_URL}${location.lat}&lng=${location.lng}&restaurantId=${id}&catalog_qa=undefined&submitAction=ENTER`);
